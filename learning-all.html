@@ -1,0 +1,331 @@
+<!--Learning General-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Silicon | Learning View</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Silicon - Multipurpose Technology Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Theme mode -->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== null && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+    </script>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+  
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg bg-light shadow-sm fixed-top">
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3">
+            BIG R
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Learning</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="learning-all.html" class="dropdown-item">All</a></li>
+                    <li><a href="learning-videos.html" class="dropdown-item">Videos</a></li>
+                    <li><a href="learning-courses.html" class="dropdown-item">Courses</a></li>
+                    <li><a href="learning-games.html" class="dropdown-item">Games</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Opportunities</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="opportunities-all.html" class="dropdown-item">All</a></li>
+                    <li><a href="opportunities-hs.html" class="dropdown-item">High School Programs</a></li>
+                    <li><a href="opportunities-freshmen.html" class="dropdown-item">College Freshmen & Sophmores</a></li>
+                    <li><a href="opportunities-undergrad.html" class="dropdown-item">Undergrad Programs</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Networking</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="networking-all.html" class="dropdown-item">All</a></li>
+                    <li><a href="networking-events.html" class="dropdown-item">Events</a></li>
+                    <li><a href="networking-hackathons.html" class="dropdown-item">Hackathons</a></li>
+                    <li><a href="networking-workshops.html" class="dropdown-item">Workshops</a></li>
+                    <li><a href="networking-communities.html" class="dropdown-item">Communities</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="offcanvas-header border-top">
+              <a href="https://themes.getbootstrap.com/product/silicon-business-technology-template-ui-kit/" class="btn btn-primary w-100" target="_blank" rel="noopener">
+                <i class="bx bx-cart fs-4 lh-1 me-1"></i>
+                &nbsp;Buy now
+              </a>
+            </div>      
+          </div>
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode">
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+          </div>
+         
+        </div>
+      </header>
+
+
+      <!-- Breadcrumb -->
+      <nav class="container py-4 my-lg-3" aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item">
+            <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Learning View</li>
+        </ol>
+      </nav>
+
+
+      <!-- Page title + filters
+      <section class="container d-sm-flex align-items-center justify-content-between pb-4 mb-2 mb-lg-3">
+        <h1 class="mb-sm-0 me-sm-3">Learning</h1>
+        <select class="form-select" style="width: 240px;">
+          <option value="All categories">All categories</option>
+          <option value="Web Design">Web Design</option>
+          <option value="Graphic Design">Graphic Design</option>
+          <option value="Branding">Branding</option>
+          <option value="UI / UX">UI / UX</option>
+          <option value="Motion Design">Motion Design</option>
+        </select>
+      </section> -->
+
+
+      <!-- Portfolio list -->
+      <section class="container pb-2 pb-lg-3">
+
+        <!-- Item -->
+        <div class="row pb-5 mb-md-4 mb-lg-5">
+          <div class="rellax col-md-6 pb-1 mb-3 pb-md-0 mb-md-0" data-rellax-percentage="0.5" data-rellax-speed="0.8" data-disable-parallax-down="md">
+            <a href="learning-videos.html">
+              <img src="assets/img/youtube-icon.jpeg" class="rounded-3" width="600" alt="Image">
+            </a>
+          </div>
+          <div class="rellax col-md-6" data-rellax-percentage="0.5" data-rellax-speed="-0.6" data-disable-parallax-down="md">
+            <div class="ps-md-4 ms-md-2">
+              <br>
+              <h2 class="h3">YouTube Courses</h2>
+              <a href="#" class="d-table badge bg-faded-primary text-primary fs-sm mb-3">Beginner Friendly</a>
+              <p class="d-md-none d-lg-block pb-3 mb-2 mb-md-3">Get started by checking out these YouTube courses to learn new skills or enhance the skills you already know!</p>
+              <a href="learning-videos.html" class="btn btn-outline-primary">View More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="row pb-5 mb-md-4 mb-lg-5">
+          <div class="rellax col-md-6 order-md-2 pb-1 mb-3 pb-md-0 mb-md-0" data-rellax-percentage="0.5" data-rellax-speed="0.8" data-disable-parallax-down="md">
+            <a href="learning-courses.html" class="float-md-end">
+              <img src="assets/img/laptop.jpeg" class="rounded-3" width="600" alt="Image">
+            </a>
+          </div>
+          <div class="rellax col-md-6 order-md-1 pt-md-4 pt-lg-5" data-rellax-percentage="0.5" data-rellax-speed="-0.6" data-disable-parallax-down="md">
+            <div class="pe-md-4 me-md-2">
+              <br>
+              <h2 class="h3">Courses</h2>
+              <a href="#" class="d-table badge bg-faded-primary text-primary fs-sm mb-3">Beginner Friendly</a>
+              <p class="d-md-none d-lg-block pb-3 mb-2 mb-md-3">Get started by visiting these websites and begin your coding lessons! This also includes apps, websites, and bootcamps.</p>
+              <a href="learning-courses.html" class="btn btn-outline-primary">View more</a>
+            </div>
+          </div>
+        </div>
+
+         <!-- Item -->
+         <div class="row pb-5 mb-md-4 mb-lg-5">
+          <div class="rellax col-md-6 pb-1 mb-3 pb-md-0 mb-md-0" data-rellax-percentage="0.5" data-rellax-speed="0.8" data-disable-parallax-down="md">
+            <a href="learning-games.html">
+              <img src="assets/img/minecraft.jpeg" class="rounded-3" width="600" alt="Image">
+            </a>
+          </div>
+          <div class="rellax col-md-6" data-rellax-percentage="0.5" data-rellax-speed="-0.6" data-disable-parallax-down="md">
+            <div class="ps-md-4 ms-md-2">
+              <br>
+              <h2 class="h3">Interactive Gaming Courses</h2>
+              <a href="#" class="d-table badge bg-faded-primary text-primary fs-sm mb-3">Beginner Friendly</a>
+              <p class="d-md-none d-lg-block pb-3 mb-2 mb-md-3">If you want to learn coding by learning interactively, try these interactive coding games!</p>
+              <a href="learning-games.html" class="btn btn-outline-primary">View More</a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+     <!-- Footer -->
+     <footer class="footer border-top pt-5 pb-4 pb-lg-5">
+      <div class="container text-center pt-2 pt-md-4 pt-lg-5 pb-xl-3">
+        <div class="row justify-content-center pt-xxl-2">
+          
+        </div>
+        <div class="pt-5 mt-lg-3 mt-xl-4">
+          <p class="text-muted mb-0"> Made with <i class="bx bx-heart d-inline-block fs-lg text-gradient-primary align-middle mt-n1 mx-1"></i> by&nbsp; <a href="https://createx.studio/" class="text-muted" target="_blank" rel="noopener">Girls Who Code Leadership Academy Participants</a></p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="assets/vendor/rellax/rellax.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
