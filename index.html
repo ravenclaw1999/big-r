@@ -1,241 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Big R</title>
 
-    <!-- SEO Meta Tags-->
-    <meta name="description" content="Silicon - Multipurpose Technology Bootstrap Template">
-    <meta name="keywords" content="bootstrap, business, creative agency, construction, services, e-commerce, shopping cart, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, gallery, slider, touch, creative">
-    <meta name="author" content="Createx Studio">
+<head>
+  <meta charset="utf-8">
+  <title>Big R</title>
 
-    <!-- Viewport-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- SEO Meta Tags-->
+  <meta name="description" content="Resource for learning how to code">
+  <meta name="keywords" content="coding, computer science, technology">
 
-    <!-- Favicon and Touch Icons-->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#080032">
-    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+  <!-- Viewport-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Vendor Styles-->
-    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
-    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
 
-    <!-- Main Theme Styles + Bootstrap-->
-    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+  <!-- Vendor Styles-->
+  <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css" />
 
-    <!-- Page loading styles -->
-    <style>
-      .page-loading {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        -webkit-transition: all .4s .2s ease-in-out;
-        transition: all .4s .2s ease-in-out;
-        background-color: #fff;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 9999;
-      }
-      .dark-mode .page-loading {
-        background-color: #0b0f19;
-      }
-      .page-loading.active {
-        opacity: 1;
-        visibility: visible;
-      }
-      .page-loading-inner {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        -webkit-transition: opacity .2s ease-in-out;
-        transition: opacity .2s ease-in-out;
-        opacity: 0;
-      }
-      .page-loading.active > .page-loading-inner {
-        opacity: 1;
-      }
-      .page-loading-inner > span {
-        display: block;
-        font-size: 1rem;
-        font-weight: normal;
-        color: #9397ad;
-      }
-      .dark-mode .page-loading-inner > span {
-        color: #fff;
-        opacity: .6;
-      }
-      .page-spinner {
-        display: inline-block;
-        width: 2.75rem;
-        height: 2.75rem;
-        margin-bottom: .75rem;
-        vertical-align: text-bottom;
-        border: .15em solid #b4b7c9;
-        border-right-color: transparent;
-        border-radius: 50%;
-        -webkit-animation: spinner .75s linear infinite;
-        animation: spinner .75s linear infinite;
-      }
-      .dark-mode .page-spinner {
-        border-color: rgba(255,255,255,.4);
-        border-right-color: transparent;
-      }
-      @-webkit-keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-      @keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-    </style>
+  <!-- Main Theme Styles + Bootstrap-->
+  <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
 
-    <!-- Theme mode -->
-    <script>
-      let mode = window.localStorage.getItem('mode'),
-          root = document.getElementsByTagName('html')[0];
-      if (mode !== null && mode === 'dark') {
-        root.classList.add('dark-mode');
-      } else {
-        root.classList.remove('dark-mode');
+  <!-- Page loading styles -->
+  <style>
+    .page-loading {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all .4s .2s ease-in-out;
+      transition: all .4s .2s ease-in-out;
+      background-color: #fff;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 9999;
+    }
+
+    .dark-mode .page-loading {
+      background-color: #0b0f19;
+    }
+
+    .page-loading.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .page-loading-inner {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -webkit-transition: opacity .2s ease-in-out;
+      transition: opacity .2s ease-in-out;
+      opacity: 0;
+    }
+
+    .page-loading.active>.page-loading-inner {
+      opacity: 1;
+    }
+
+    .page-loading-inner>span {
+      display: block;
+      font-size: 1rem;
+      font-weight: normal;
+      color: #9397ad;
+    }
+
+    .dark-mode .page-loading-inner>span {
+      color: #fff;
+      opacity: .6;
+    }
+
+    .page-spinner {
+      display: inline-block;
+      width: 2.75rem;
+      height: 2.75rem;
+      margin-bottom: .75rem;
+      vertical-align: text-bottom;
+      border: .15em solid #b4b7c9;
+      border-right-color: transparent;
+      border-radius: 50%;
+      -webkit-animation: spinner .75s linear infinite;
+      animation: spinner .75s linear infinite;
+    }
+
+    .dark-mode .page-spinner {
+      border-color: rgba(255, 255, 255, .4);
+      border-right-color: transparent;
+    }
+
+    @-webkit-keyframes spinner {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
       }
-    </script>
+    }
 
-    <!-- Page loading scripts -->
-    <script>
-      (function () {
-        window.onload = function () {
-          const preloader = document.querySelector('.page-loading');
-          preloader.classList.remove('active');
-          setTimeout(function () {
-            preloader.remove();
-          }, 1000);
-        };
-      })();
-    </script>
-  </head>
-  
+    @keyframes spinner {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 
-  <!-- Body -->
-  <body>
+  <!-- Theme mode -->
+  <script>
+    let mode = window.localStorage.getItem('mode'),
+      root = document.getElementsByTagName('html')[0];
+    if (mode !== null && mode === 'dark') {
+      root.classList.add('dark-mode');
+    } else {
+      root.classList.remove('dark-mode');
+    }
+  </script>
 
-    <!-- Page loading spinner -->
-    <div class="page-loading active">
-      <div class="page-loading-inner">
-        <div class="page-spinner"></div><span>Loading...</span>
-      </div>
+  <!-- Page loading scripts -->
+  <script>
+    (function () {
+      window.onload = function () {
+        const preloader = document.querySelector('.page-loading');
+        preloader.classList.remove('active');
+        setTimeout(function () {
+          preloader.remove();
+        }, 1000);
+      };
+    })();
+  </script>
+</head>
+
+
+<!-- Body -->
+
+<body>
+
+  <!-- Page loading spinner -->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner"></div><span>Loading...</span>
     </div>
-    
-
-    <!-- Page wrapper for sticky footer -->
-    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
-    <main class="page-wrapper">
+  </div>
 
 
-      <!-- Navbar -->
-      <!-- Remove "fixed-top" class to make navigation bar scrollable with the page -->
-      <header class="header navbar navbar-expand-lg bg-light shadow-sm fixed-top">
-        <div class="container px-3">
-          <a href="index.html" class="navbar-brand pe-3">
-            BIG R
-          </a>
-          <div id="navbarNav" class="offcanvas offcanvas-end">
-            <div class="offcanvas-header border-bottom">
-              <h5 class="offcanvas-title">Menu</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Learning</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="learning-all.html" class="dropdown-item">All</a></li>
-                    <li><a href="learning-videos.html" class="dropdown-item">Videos</a></li>
-                    <li><a href="learning-courses.html" class="dropdown-item">Courses</a></li>
-                    <li><a href="learning-games.html" class="dropdown-item">Games</a></li>
-                  </ul>
-                </li>
+  <!-- Page wrapper for sticky footer -->
+  <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+  <main class="page-wrapper">
 
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Opportunities</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="opportunities-all.html" class="dropdown-item">All</a></li>
-                    <li><a href="opportunities-hs.html" class="dropdown-item">High School Programs</a></li>
-                    <li><a href="opportunities-freshmen.html" class="dropdown-item">College Freshmen & Sophmores</a></li>
-                    <li><a href="opportunities-undergrad.html" class="dropdown-item">Undergrad Programs</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Networking</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="networking-all.html" class="dropdown-item">All</a></li>
-                    <li><a href="networking-events.html" class="dropdown-item">Events</a></li>
-                    <li><a href="networking-hackathons.html" class="dropdown-item">Hackathons</a></li>
-                    <li><a href="networking-workshops.html" class="dropdown-item">Workshops</a></li>
-                    <li><a href="networking-communities.html" class="dropdown-item">Communities</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>    
+
+    <!-- Navbar -->
+    <!-- Remove "fixed-top" class to make navigation bar scrollable with the page -->
+    <header class="header navbar navbar-expand-lg bg-light shadow-sm fixed-top">
+      <div class="container px-3">
+        <a href="index.html" class="navbar-brand pe-3">
+          BIG R
+        </a>
+        <div id="navbarNav" class="offcanvas offcanvas-end">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
-            <input type="checkbox" class="form-check-input" id="theme-mode">
-            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
-            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Learning</a>
+                <ul class="dropdown-menu">
+                  <li><a href="learning-all.html" class="dropdown-item">All</a></li>
+                  <li><a href="learning-videos.html" class="dropdown-item">Videos</a></li>
+                  <li><a href="learning-courses.html" class="dropdown-item">Courses</a></li>
+                  <li><a href="learning-games.html" class="dropdown-item">Games</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Opportunities</a>
+                <ul class="dropdown-menu">
+                  <li><a href="opportunities-all.html" class="dropdown-item">All</a></li>
+                  <li><a href="opportunities-hs.html" class="dropdown-item">High School Programs</a></li>
+                  <li><a href="opportunities-freshmen.html" class="dropdown-item">College Freshmen & Sophmores</a></li>
+                  <li><a href="opportunities-undergrad.html" class="dropdown-item">Undergrad Programs</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Networking</a>
+                <ul class="dropdown-menu">
+                  <li><a href="networking-all.html" class="dropdown-item">All</a></li>
+                  <li><a href="networking-events.html" class="dropdown-item">Events</a></li>
+                  <li><a href="networking-hackathons.html" class="dropdown-item">Hackathons</a></li>
+                  <li><a href="networking-workshops.html" class="dropdown-item">Workshops</a></li>
+                  <li><a href="networking-communities.html" class="dropdown-item">Communities</a></li>
+                </ul>
+              </li>
+            </ul>
           </div>
-          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-         
         </div>
-      </header>
+        <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+          <input type="checkbox" class="form-check-input" id="theme-mode">
+          <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+          <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+        </div>
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+      </div>
+    </header>
 
 
-      <!-- Hero -->
-      <section class="dark-mode vh-100 bg-repeat-0 bg-position-center bg-size-cover overflow-hidden" style="background-image: url(assets/img/landing/intro/hero/bg.jpg);">
-        <div class="container vh-100">
-          <div class="row flex-nowrap vh-100">
-            <div class="col-lg-4 col-md-5 d-flex flex-column text-center text-md-start py-5">
-              <h1 class="display-3 mt-auto mb-4">Big R</h1>
-              <p class="lead text-light opacity-70 pb-5 mb-0 mb-md-3">Resources for Learning /<br class="d-none d-md-inline">How to Code</p>
-              <div class="position-relative d-flex align-items-center justify-content-center justify-content-md-start mb-md-4 mb-lg-5 mt-auto">
-                <div class="btn btn-icon btn-secondary rounded-circle">
-                  <i class="bx bx-chevron-down"></i>
-                </div>
-                <a href="#landings" class="nav-link stretched-link text-light fw-normal opacity-80 py-2 px-3" data-scroll data-scroll-offset="70">View More</a>
+    <!-- Hero -->
+    <section class="dark-mode vh-100 bg-repeat-0 bg-position-center bg-size-cover overflow-hidden"
+      style="background-image: url(assets/img/landing/intro/hero/bg.jpg);">
+      <div class="container vh-100">
+        <div class="row flex-nowrap vh-100">
+          <div class="col-lg-4 col-md-5 d-flex flex-column text-center text-md-start py-5">
+            <h1 class="display-3 mt-auto mb-4">Big R</h1>
+            <p class="lead text-light opacity-70 pb-5 mb-0 mb-md-3">Resources for Learning /<br
+                class="d-none d-md-inline">How to Code</p>
+            <div
+              class="position-relative d-flex align-items-center justify-content-center justify-content-md-start mb-md-4 mb-lg-5 mt-auto">
+              <div class="btn btn-icon btn-secondary rounded-circle">
+                <i class="bx bx-chevron-down"></i>
               </div>
+              <a href="#landings" class="nav-link stretched-link text-light fw-normal opacity-80 py-2 px-3" data-scroll
+                data-scroll-offset="70">View More</a>
             </div>
-            <!-- <div class="d-flex flex-shrink-0 align-items-start">
-              <img src="assets/img/header-photo3.jpg" class="rellax d-block flex-shrink-0 mt-n5" width="1450" height="1350" alt="Screens" data-rellax-speed="4" data-disable-parallax-down="md">
-            </div> -->
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
 
-      <!-- Main features (Slider on narrow scrreens) -->
-      <section class="container pt-5">
-        <div class="swiper mt-n3 mt-md-0 pt-md-4 pt-lg-5 mx-n2" data-swiper-options='{
+    <!-- Main features (Slider on narrow scrreens) -->
+    <section class="container pt-5">
+      <div class="swiper mt-n3 mt-md-0 pt-md-4 pt-lg-5 mx-n2" data-swiper-options='{
           "slidesPerView": 1,
           "spaceBetween": 8,
           "pagination": {
@@ -258,130 +262,170 @@
             }
           }
         }'>
-      </section>
+    </section>
 
 
-      <!-- Landings (Grid) -->
-      <section id="landings" class="container text-center pt-5 mt-2 mt-md-4 mt-lg-5">
-        <h2 class="h1 pt-2 pt-lg-0">Are you new to computer science / coding?</h2>
-        <p class="fs-lg pb-2 pb-md-3 pb-lg-0 mb-4 mb-lg-5">Choose a category to get started on your CS journey!</p>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
-          <div class="col card-hover shadow-none bg-none position-relative mb-4 mb-lg-5">
-            <img src="assets/img/hack.jpeg" class="b-block border rounded-3 shadow-sm" alt="Mobile App Showcase v.1">
-            <h3 class="h5 mt-4 mb-3 mb-lg-0">
-              <a href="learning-all.html" class="stretched-link">Learning</a>
-            </h3>
-          </div>
-          <div class="col card-hover shadow-none bg-none position-relative mb-4 mb-lg-5">
-            <img src="assets/img/events.jpeg" class="b-block border rounded-3 shadow-sm" alt="Mobile App Showcase v.2">
-            <h3 class="h5 mt-4 mb-3 mb-lg-0">
-              <a href="opportunities-all.html" class="stretched-link">Opportunities</a>
-            </h3>
-          </div>
-          <div class="col card-hover shadow-none bg-none position-relative mb-4 mb-lg-5">
-            <img src="assets/img/community.jpeg" class="b-block border rounded-3 shadow-sm" alt="Mobile App Showcase v.2">
-            <h3 class="h5 mt-4 mb-3 mb-lg-0">
-              <a href="networking-all.html" class="d-flex justify-content-center align-items-center stretched-link">Networking</a>
-            </h3>
-          </div>
-          
-          
-          
-          
+    <!-- Landings (Grid) -->
+    <section id="landings" class="container text-center pt-5 mt-2 mt-md-4 mt-lg-5">
+      <h2 class="h1 pt-2 pt-lg-0">Are you new to computer science / coding?</h2>
+      <p class="fs-lg pb-2 pb-md-3 pb-lg-0 mb-4 mb-lg-5">Choose a category to get started on your CS journey!</p>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
+        <div class="col card-hover shadow-none bg-none position-relative mb-4 mb-lg-5">
+          <img src="assets/img/hack.jpeg" class="b-block border rounded-3 shadow-sm" alt="Mobile App Showcase v.1">
+          <h3 class="h5 mt-4 mb-3 mb-lg-0">
+            <a href="learning-all.html" class="stretched-link">Learning</a>
+          </h3>
         </div>
-      </section>
-
-
-      <!-- More features (Grid) -->
-      <section class="container pt-4 pb-5 py-lg-5">
-        <h2 class="h1 text-center pt-1 pt-md-3 pt-lg-4 pb-3 pb-md-4 mb-0 mb-lg-3">About Big of R</h2>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-lg-3 g-xl-4 pb-md-3 pb-lg-5">
-
-          <!-- Item -->
-          <div class="col">
-            <div class="card h-100 bg-transparent border-0">
-              <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
-                <i class="bx bxl-bootstrap fs-2 text-gradient-primary" style="padding: .375rem;"></i>
-              </div>
-              <div class="card-body">
-                <h3 class="h6">Stop Gatekeeping</h3>
-                <p class="fs-sm mb-0">We believe that computer science education should be accessible to everyone!</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item -->
-          <div class="col">
-            <div class="card h-100 bg-transparent border-0">
-              <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
-                <i class="bx bx-file fs-2 text-gradient-primary" style="padding: .375rem;"></i>
-              </div>
-              <div class="card-body">
-                <h3 class="h6">Support Fellow Developer</h3>
-                <p class="fs-sm mb-0">As creators of this resource, we believe that supporting each other as developers, especially those who have been in the field for much longer.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item -->
-          <div class="col">
-            <div class="card h-100 bg-transparent border-0">
-              <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
-                <i class="bx bx-mobile fs-2 text-gradient-primary" style="padding: .375rem;"></i>
-              </div>
-              <div class="card-body">
-                <h3 class="h6">Coding is for Everyone</h3>
-                <p class="fs-sm mb-0">We believe that anyone and everyone can learn how to code, and with the right (FREE!) resources, they can!</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item -->
-          <div class="col">
-            <div class="card h-100 bg-transparent border-0">
-              <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
-                <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none"><g clip-path="url(#D)"><path d="M6.706 11.335c0-4.925 4.007-8.932 8.932-8.932s8.932 4.007 8.932 8.932a9 9 0 0 1-.169 1.73l2.358.463c.142-.723.214-1.461.214-2.193A11.35 11.35 0 0 0 15.638 0 11.35 11.35 0 0 0 4.303 11.335c0 2.566.883 5.081 2.486 7.082l1.875-1.503a8.83 8.83 0 0 1-1.958-5.579z" fill="url(#A)"/><path d="M15.638 6.407c2.716 0 4.927 2.21 4.927 4.927h2.403a7.34 7.34 0 0 0-7.33-7.33 7.34 7.34 0 0 0-7.33 7.33 7.33 7.33 0 0 0 .959 3.623l2.088-1.19c-.421-.739-.643-1.581-.643-2.433 0-2.716 2.21-4.927 4.926-4.927z" fill="url(#B)"/><path d="M28.375 17.3a3.31 3.31 0 0 0-1.06.173 3.33 3.33 0 0 0-3.186-2.374c-.392 0-.767.069-1.116.193a3.33 3.33 0 0 0-3.129-2.203c-.32 0-.628.046-.921.131v-1.884a3.33 3.33 0 0 0-3.324-3.324 3.33 3.33 0 0 0-3.324 3.324v6.998c-.293-.084-.602-.131-.921-.131a3.33 3.33 0 0 0-3.324 3.324v6.236a8.25 8.25 0 0 0 8.237 8.237h7.157a8.25 8.25 0 0 0 8.237-8.237v-7.14a3.33 3.33 0 0 0-3.324-3.324zm.921 10.464c0 3.217-2.617 5.834-5.834 5.834h-7.157c-3.217 0-5.834-2.617-5.834-5.834v-6.236c0-.508.413-.921.921-.921s.921.413.921.921v4.852h2.403V11.336c0-.508.413-.921.921-.921s.921.413.921.921v5.077 3.526.684h2.403v-.684-3.526c0-.508.413-.921.921-.921s.921.413.921.921v4.211h2.403v-2.201c0-.508.413-.921.921-.921s.921.413.921.921v2.201h2.403c0-.508.413-.921.921-.921s.921.413.921.921v7.14z" fill="url(#C)"/></g><defs><linearGradient id="A" x1="4.303" y1="9.252" x2="26.973" y2="9.252" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="B" x1="8.309" y1="9.506" x2="22.968" y2="9.506" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="C" x1="8.068" y1="22.073" x2="31.7" y2="22.073" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><clipPath id="D"><path fill="#fff" d="M0 0h36v36H0z"/></clipPath></defs></svg>
-              </div>
-              <div class="card-body">
-                <h3 class="h6">Community</h3>
-                <p class="fs-sm mb-0">We believe that having a strong support system in this field is key to your success, which is why we have included our "Networking" section.</p>
-              </div>
-            </div>
-          </div>
-
-
-      </section>
-    </main>
-
-
-    <!-- Footer -->
-    <footer class="footer border-top pt-5 pb-4 pb-lg-5">
-      <div class="container text-center pt-2 pt-md-4 pt-lg-5 pb-xl-3">
-        <div class="row justify-content-center pt-xxl-2">
-          
+        <div class="col card-hover shadow-none bg-none position-relative mb-4 mb-lg-5">
+          <img src="assets/img/events.jpeg" class="b-block border rounded-3 shadow-sm" alt="Mobile App Showcase v.2">
+          <h3 class="h5 mt-4 mb-3 mb-lg-0">
+            <a href="opportunities-all.html" class="stretched-link">Opportunities</a>
+          </h3>
         </div>
-        <div class="pt-5 mt-lg-3 mt-xl-4">
-          <p class="text-muted mb-0"> Made with <i class="bx bx-heart d-inline-block fs-lg text-gradient-primary align-middle mt-n1 mx-1"></i> by&nbsp; <a href="https://createx.studio/" class="text-muted" target="_blank" rel="noopener">Girls Who Code Leadership Academy Participants</a></p>
+        <div class="col card-hover shadow-none bg-none position-relative mb-4 mb-lg-5">
+          <img src="assets/img/community.jpeg" class="b-block border rounded-3 shadow-sm" alt="Mobile App Showcase v.2">
+          <h3 class="h5 mt-4 mb-3 mb-lg-0">
+            <a href="networking-all.html"
+              class="d-flex justify-content-center align-items-center stretched-link">Networking</a>
+          </h3>
         </div>
+
+
+
+
       </div>
-    </footer>
+    </section>
 
 
-    <!-- Back to top button -->
-    <a href="#top" class="btn-scroll-top" data-scroll>
-      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
-      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
-    </a>
+    <!-- More features (Grid) -->
+    <section class="container pt-4 pb-5 py-lg-5">
+      <h2 class="h1 text-center pt-1 pt-md-3 pt-lg-4 pb-3 pb-md-4 mb-0 mb-lg-3">About Big of R</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-lg-3 g-xl-4 pb-md-3 pb-lg-5">
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <i class="bx bxl-bootstrap fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">Stop Gatekeeping</h3>
+              <p class="fs-sm mb-0">We believe that computer science education should be accessible to everyone!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <i class="bx bx-file fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">Support Fellow Developer</h3>
+              <p class="fs-sm mb-0">As creators of this resource, we believe that supporting each other as developers,
+                especially those who have been in the field for much longer.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <i class="bx bx-mobile fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">Coding is for Everyone</h3>
+              <p class="fs-sm mb-0">We believe that anyone and everyone can learn how to code, and with the right
+                (FREE!) resources, they can!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none">
+                <g clip-path="url(#D)">
+                  <path
+                    d="M6.706 11.335c0-4.925 4.007-8.932 8.932-8.932s8.932 4.007 8.932 8.932a9 9 0 0 1-.169 1.73l2.358.463c.142-.723.214-1.461.214-2.193A11.35 11.35 0 0 0 15.638 0 11.35 11.35 0 0 0 4.303 11.335c0 2.566.883 5.081 2.486 7.082l1.875-1.503a8.83 8.83 0 0 1-1.958-5.579z"
+                    fill="url(#A)" />
+                  <path
+                    d="M15.638 6.407c2.716 0 4.927 2.21 4.927 4.927h2.403a7.34 7.34 0 0 0-7.33-7.33 7.34 7.34 0 0 0-7.33 7.33 7.33 7.33 0 0 0 .959 3.623l2.088-1.19c-.421-.739-.643-1.581-.643-2.433 0-2.716 2.21-4.927 4.926-4.927z"
+                    fill="url(#B)" />
+                  <path
+                    d="M28.375 17.3a3.31 3.31 0 0 0-1.06.173 3.33 3.33 0 0 0-3.186-2.374c-.392 0-.767.069-1.116.193a3.33 3.33 0 0 0-3.129-2.203c-.32 0-.628.046-.921.131v-1.884a3.33 3.33 0 0 0-3.324-3.324 3.33 3.33 0 0 0-3.324 3.324v6.998c-.293-.084-.602-.131-.921-.131a3.33 3.33 0 0 0-3.324 3.324v6.236a8.25 8.25 0 0 0 8.237 8.237h7.157a8.25 8.25 0 0 0 8.237-8.237v-7.14a3.33 3.33 0 0 0-3.324-3.324zm.921 10.464c0 3.217-2.617 5.834-5.834 5.834h-7.157c-3.217 0-5.834-2.617-5.834-5.834v-6.236c0-.508.413-.921.921-.921s.921.413.921.921v4.852h2.403V11.336c0-.508.413-.921.921-.921s.921.413.921.921v5.077 3.526.684h2.403v-.684-3.526c0-.508.413-.921.921-.921s.921.413.921.921v4.211h2.403v-2.201c0-.508.413-.921.921-.921s.921.413.921.921v2.201h2.403c0-.508.413-.921.921-.921s.921.413.921.921v7.14z"
+                    fill="url(#C)" />
+                </g>
+                <defs>
+                  <linearGradient id="A" x1="4.303" y1="9.252" x2="26.973" y2="9.252" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#6366f1" />
+                    <stop offset=".5" stop-color="#8b5cf6" />
+                    <stop offset="1" stop-color="#d946ef" />
+                  </linearGradient>
+                  <linearGradient id="B" x1="8.309" y1="9.506" x2="22.968" y2="9.506" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#6366f1" />
+                    <stop offset=".5" stop-color="#8b5cf6" />
+                    <stop offset="1" stop-color="#d946ef" />
+                  </linearGradient>
+                  <linearGradient id="C" x1="8.068" y1="22.073" x2="31.7" y2="22.073" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#6366f1" />
+                    <stop offset=".5" stop-color="#8b5cf6" />
+                    <stop offset="1" stop-color="#d946ef" />
+                  </linearGradient>
+                  <clipPath id="D">
+                    <path fill="#fff" d="M0 0h36v36H0z" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">Community</h3>
+              <p class="fs-sm mb-0">We believe that having a strong support system in this field is key to your success,
+                which is why we have included our "Networking" section.</p>
+            </div>
+          </div>
+        </div>
 
 
-    <!-- Vendor Scripts -->
-    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="assets/vendor/rellax/rellax.min.js"></script>
-    <script src="assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    </section>
+  </main>
 
-    <!-- Main Theme Script -->
-    <script src="assets/js/theme.min.js"></script>
-  </body>
+
+  <!-- Footer -->
+  <footer class="footer border-top pt-5 pb-4 pb-lg-5">
+    <div class="container text-center pt-2 pt-md-4 pt-lg-5 pb-xl-3">
+      <div class="row justify-content-center pt-xxl-2">
+
+      </div>
+      <div class="pt-5 mt-lg-3 mt-xl-4">
+        <p class="text-muted mb-0"> Made with <i
+            class="bx bx-heart d-inline-block fs-lg text-gradient-primary align-middle mt-n1 mx-1"></i> by&nbsp; <a
+            href="https://createx.studio/" class="text-muted" target="_blank" rel="noopener">Girls Who Code Leadership
+            Academy Participants</a></p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Back to top button -->
+  <a href="#top" class="btn-scroll-top" data-scroll>
+    <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+    <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+  </a>
+
+
+  <!-- Vendor Scripts -->
+  <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="assets/vendor/rellax/rellax.min.js"></script>
+  <script src="assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main Theme Script -->
+  <script src="assets/js/theme.min.js"></script>
+</body>
+
 </html>
